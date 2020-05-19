@@ -6,6 +6,9 @@
   width: 30%;
   max-width: 300px;
 }
+body{
+  background-color: #f1efefe3!important;
+}
 .btn-crikcrok{
   border-radius: 30px;
 }

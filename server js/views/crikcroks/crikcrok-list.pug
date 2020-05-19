@@ -3,5 +3,7 @@ if crikcroks
         div(class="card crikcrok-element")
             div(class="card-body")
                 div(class="card-text")=crikcrok.content
-                    img.image(src='/' + img_path_var )
-                    button(class='btn-danger mt-2 float-right' crikcrokid=crikcrok._id) delete
+                    //img.image(src='/' + img_path_var )
+                    if isAuthenticated
+                        button(class='btn-danger mt-2 float-right' crikcrokid=crikcrok._id) delete
+                    else

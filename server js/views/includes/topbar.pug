@@ -1,4 +1,4 @@
-nav(class="navbar navbar-expand-lg navbar-light bg-light")
+nav(class="navbar navbar-expand-lg navbar-light bg-white")
     a(class="navbar-brand" href="/crikcroks")
         img(width="30" height="30" src="/images/logo.jpg")
     button(class="navbar-toggler")
@@ -7,14 +7,16 @@ nav(class="navbar navbar-expand-lg navbar-light bg-light")
         ul(class="navbar-nav ml-auto")
             if isAuthenticated
                 li(class="nav-item active")
-                    a(class="btn btn-primary btn-crikcrok mr-2" href="/crikcroks/new") Crikcrok
+                    a(class="btn btn-primary btn-crikcrok mr-2" href="/crikcroks/new") Creer un Crikcrok
                 li(class="nav-item active")
-                    a(class="btn btn-primary btn-crikcrok mr-2" href="/auth/signout") Deconnexion
+                    a(class="btn btn-primary btn-crikcrok mr-2" href="/crikcroks") List des Crikcroks
+                li(class="nav-item active")
+                    a(class="nav-link" href="/auth/signout") Deconnexion
             else
                 li(class="nav-item")
                     a(class="nav-link" href="/auth/signin/form") Connexion
                 li(class="nav-item active")
-                    a(class="btn btn-primary btn-crikcrok mr-2" href="/crikcroks/new") Crikcrok
+                    a(class="btn btn-primary btn-crikcrok mr-2" href="/crikcroks") List des Crikcroks
                 li(class="nav-item")
                     a(class="nav-link" href="/users/signup/form") Inscription
 

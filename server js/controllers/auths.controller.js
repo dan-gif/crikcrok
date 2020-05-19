@@ -30,6 +30,6 @@ exports.signin = (req, res, next) => {console.log('test34');
 }
 
 exports.signout = (req, res, next) => {
-    res.logout();
+    req.logout();
     res.redirect('/auth/signin/form');
 }

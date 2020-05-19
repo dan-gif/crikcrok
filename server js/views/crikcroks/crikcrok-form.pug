@@ -2,17 +2,17 @@ extends ../layout.pug
 
 block "content"
     div(class= "d-flex flex-row content mx-auto")
-        div(class= "profile-container ") 
-            include ../includes/profile
+        include ../includes/profiles
         div(class= "flex-fill") 
             form(class="card" method="post" action="/crikcroks")
                 div(class="card-header") Ecrire un crikcrok / recette
                 div( class="card-body") 
                     div(class="form-group")
-                        textarea(class="form-control" name="content" placeholder=" what is happening")
-                    div
+                        textarea(class="form-control" name="content" placeholder=" what is happening")     
+                    //include ../includes/profiles
                         label Selectionnez une image
-                            input.filepond(type='file' name='cover')
+                            input.filepond(type='file' name='cover' method="post" action="/file")
+                            input.file(type='file' name='cover' method="post" action="/file" enctype="multipart/form-data")
                     if errors
                         ul(class="my-2")
                             each error in errors

@@ -5,7 +5,7 @@ exports.getCrikcrok =()=> {
     
     return Crikcrok.find({}).exec();
 }
-exports.createCrikcrok =( crikcrok)=>{
+exports.createCrikcrok =(crikcrok)=>{
     const newCrikcrok = new Crikcrok(crikcrok);
     return newCrikcrok.save();
 

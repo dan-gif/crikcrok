@@ -1,11 +1,12 @@
 const router = require('express').Router();
+const {ensureAuthenticated} = require('../config/guards.config');
 const { crikcrokList, crikcrokNew, crikcrokCreate,crikcrokDelete } = require('../controllers/crikcroks.controller');
 
 
 router.get('/', crikcrokList);
-router.get('/new',crikcrokNew);
-router.post('/', crikcrokCreate);
-router.delete('/:crikcrokId', crikcrokDelete);
+router.get('/new',ensureAuthenticated, crikcrokNew);
+router.post('/crikcroks',ensureAuthenticated, crikcrokCreate);
+router.delete('/:crikcrokId',ensureAuthenticated, crikcrokDelete);
 
 
 module.exports = router;

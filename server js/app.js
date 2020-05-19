@@ -15,10 +15,11 @@ app.set('view engine', 'pug');
 
 require('./config/session.config');
 require('./config/passport.config');
-app.use(morgan('short'));
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended:true }));
+app.use(morgan('tiny'));
 app.use(route);
 
 console.log(process.env.NODE_ENV);
