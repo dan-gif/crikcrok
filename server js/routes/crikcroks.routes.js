@@ -7,6 +7,6 @@ router.get('/', crikcrokList);
 router.get('/new',ensureAuthenticated, crikcrokNew);
 router.post('/',ensureAuthenticated, crikcrokCreate);
 router.delete('/:crikcrokId',ensureAuthenticated, crikcrokDelete);
-router.post('/upload/image',ensureAuthenticated,uploadImage );
+router.post('/upload/images',ensureAuthenticated,uploadImage );
 
 module.exports = router;
