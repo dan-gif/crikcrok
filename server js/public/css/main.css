@@ -12,6 +12,9 @@
 body{
   background-color: #f1efefe3!important;
 }
+.img-fluid{
+  max-height: 100px;
+}
 .btn-crikcrok{
   border-radius: 30px;
 }
