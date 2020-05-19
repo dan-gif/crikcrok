@@ -8,7 +8,8 @@ const crikcrokSchema = schema({
         minlength: [10,'crikcrok trop court'],
         required: [true,'champ requis']
     },
-    author: { type: schema.Types.ObjectId, ref: 'user', required: true }
+    author: { type: schema.Types.ObjectId, ref: 'user', required: true },
+    recettes:{type:String,/*required:true,*/default:'/images/images.svg' }
 });
   
 const Crikcrok = mongoose.model('crikcrok', crikcrokSchema);

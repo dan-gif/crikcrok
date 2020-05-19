@@ -10,9 +10,9 @@ block "content"
                 div( class="card-body") 
                     div(class="form-group")
                         textarea(class="form-control" name="content" placeholder=" what is happening")     
-                    //include ../includes/profiles
+                            //include ../includes/profiles
                         label Selectionnez une image
-                            input.filepond(type='file' name='cover' method="post" action="/file")
+                            //input.filepond(type='file' name='cover' method="post" action="/file")
                             input.file(type='file' name='cover' method="post" action="/file" enctype="multipart/form-data")
                     if errors
                         ul(class="my-2")

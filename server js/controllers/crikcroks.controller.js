@@ -1,4 +1,15 @@
 const {getCrikcrok , createCrikcrok, deleteCrikcrok, } =require('../queries/crikcroks.queries');
+const path = require('path');
+const multer= require('multer');
+const upload = multer({ storage: multer.diskStorage({
+    destination: (req, file, cb) => {
+      cb(null, path.join( __dirname, '../public/images/recettes'))
+    },
+    filename: (req, file, cb) => {
+      cb(null, `${ Date.now() }-${ file.originalname }`);
+    }
+  }) 
+})
 
 
 exports.crikcrokList = async(req, res, next)=>{
@@ -36,3 +47,20 @@ exports.crikcrokDelete= async(req, res, next)=>{
         next(e);
     }
 }
+exports.uploadImage = [
+
+    upload.single('recettes'),
+    
+    async(req, res, next)=>{
+        try{
+            const crikcroks= req.crikcroks;
+            crikcroks.recettes='/images/recettes/${req.file.fliename}';
+            await crikcroks.save();
+
+            res.redirect('/');
+            
+        }catch(e){
+            next(e);
+        }
+    res.end()
+}]
