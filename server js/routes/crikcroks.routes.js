@@ -5,7 +5,7 @@ const { crikcrokList, crikcrokNew, crikcrokCreate,crikcrokDelete } = require('..
 
 router.get('/', crikcrokList);
 router.get('/new',ensureAuthenticated, crikcrokNew);
-router.post('/crikcroks',ensureAuthenticated, crikcrokCreate);
+router.post('/',ensureAuthenticated, crikcrokCreate);
 router.delete('/:crikcrokId',ensureAuthenticated, crikcrokDelete);
 
 

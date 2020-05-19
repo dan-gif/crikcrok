@@ -12,7 +12,7 @@ exports.crikcrokList = async(req, res, next)=>{
 }
 
 exports.crikcrokNew = (req, res, next)=>{
-    res.render('crikcroks/crikcrok-form',{crikcrok:{}, isAuthenticated: req.isAuthenticated(), currentUser: req.user });
+    res.render('crikcroks/crikcrok-form',{crikcroks:{}, isAuthenticated: req.isAuthenticated(), currentUser: req.user });
 }
 
 

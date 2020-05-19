@@ -4,7 +4,7 @@ exports.signinForm = (req, res, next) => {
   res.render('auth/auth-form', { error: null, isAuthenticated: req.isAuthenticated(), currentUser: req.user });
 }
 
-exports.signin = (req, res, next) => {console.log('test34');
+exports.signin = (req, res, next) => {
   passport.authenticate('local',(err,user,info)=>{
 
     if(err){
@@ -12,11 +12,10 @@ exports.signin = (req, res, next) => {console.log('test34');
     }
     else if(!user){
       res.render( './auth/auth-form', { errors: [info.message], isAuthenticated: req.isAuthenticated(), currentUser: req.user});
-      console.log(user);
     }
-    else{console.log( 'test314');
+    else{
       req.login(user, (err)=>{
-        console.log( 'test314');
+
           if(err){
             next(err)
           }
