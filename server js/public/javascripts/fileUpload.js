@@ -1,13 +1,16 @@
-FilePond.registerPlugin(
-    FilePondPluginImagePreview,
-    FilePondPluginImageResize,
-    FilePondPluginFileEncode,
-  )
-  
-  FilePond.setOptions({
-    stylePanelAspectRatio: 150 / 100,
-    imageResizeTargetWidth: 100,
-    imageResizeTargetHeight: 150
+window.addEventListener('DOMContentLoaded',()=>{
+
+  const input_recette = document.querySelector('#input_recette')
+  const formContainer = document.querySelector('#formContainer')
+
+
+  formContainer.addEventListener('click',(e)=>{
+  console.log('clik')
+  input_recette.click();
   })
-  
-  FilePond.parse(document.body);
+
+
+  input_recette.addEventListener('change',(e)=>{
+    formContainer.submit();
+  })
+})
