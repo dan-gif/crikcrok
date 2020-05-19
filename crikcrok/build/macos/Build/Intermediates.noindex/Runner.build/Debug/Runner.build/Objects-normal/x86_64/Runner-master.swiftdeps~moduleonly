@@ -1,7 +1,0 @@
-version: "Apple Swift version 5.2.2 (swiftlang-1103.0.32.6 clang-1103.0.32.51)"
-options: "add466d490983a2bb37f923d1af94451"
-build_time: [1588278476, 784395000]
-inputs:
-  "/Users/dannabet/Documents/Sites/crikcrok/macos/Runner/MainFlutterWindow.swift": [1581426576, 0]
-  "/Users/dannabet/Documents/Sites/crikcrok/macos/Runner/AppDelegate.swift": [1581426576, 0]
-  "/Users/dannabet/Documents/Sites/crikcrok/macos/Flutter/GeneratedPluginRegistrant.swift": [1588278439, 204194864]
