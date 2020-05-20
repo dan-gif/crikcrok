@@ -1,4 +1,5 @@
-import 'package:crikcrok/commentaires.dart';
+import 'package:crikcrok/dropdown.dart';
+import 'package:crikcrok/newsRecette.dart';
 import 'package:flutter/material.dart';
 
 class premier extends StatefulWidget {
@@ -54,6 +55,7 @@ class _premierState extends State<premier> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
+              dropdown(),
             ],
           ),
         ),
