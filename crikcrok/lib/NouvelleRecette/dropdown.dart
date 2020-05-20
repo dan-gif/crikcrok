@@ -1,3 +1,4 @@
+import 'package:crikcrok/vue/Entree/entreeFroide.dart';
 import 'package:flutter/material.dart';
 
 class dropdown extends StatefulWidget {
@@ -110,16 +111,17 @@ class _dropdownState extends State<dropdown> {
                 ),
               ],
               onChanged: (_value) => selected(_value),
-              hint: Text("Aucun Choix "),
+                hint: Text("votre choix"),
+                disabledHint: Text("$value"),
             ),
           ),
           DropdownButton<String>(
               items: menuitems,
               onChanged:
                   disabledropdown ? null : (_value) => secondselected(_value),
-              hint: Text("veuillez faire votre choix"),
-              disabledHint: Text("premiers choix")),
-          Text('$value',style: TextStyle(color:Colors.white,fontSize: 20),),
+              hint: Text("$value"),
+              disabledHint: Text("votre second choix")),
+          Text('$value',style: TextStyle(color:Colors.white,fontSize: 20,),),
         ],
       ),
     );

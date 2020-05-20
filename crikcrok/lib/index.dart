@@ -1,4 +1,4 @@
-import 'package:crikcrok/dropdown.dart';
+import 'package:crikcrok/NouvelleRecette/dropdown.dart';
 import 'package:crikcrok/newsRecette.dart';
 import 'package:flutter/material.dart';
 
@@ -34,7 +34,7 @@ class _premierState extends State<premier> {
             },
           ),
           title: Text(
-            'Nom du site/application',
+            'Crikcrok',
             style: TextStyle(
               fontSize: 25.0,
               fontWeight: FontWeight.bold,

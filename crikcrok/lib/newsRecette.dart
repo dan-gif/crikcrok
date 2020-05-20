@@ -1,6 +1,6 @@
-import 'package:crikcrok/accueil.dart';
-import 'package:crikcrok/dropdown.dart';
-import 'package:crikcrok/vue.dart';
+import 'package:crikcrok/NouvelleRecette/dropdown.dart';
+import 'package:crikcrok/index.dart';
+import 'package:crikcrok/NouvelleRecette/vue.dart';
 import 'package:flutter/material.dart';
 
 class mainScreen extends StatelessWidget {
