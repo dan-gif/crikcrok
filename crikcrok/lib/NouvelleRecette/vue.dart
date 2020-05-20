@@ -35,14 +35,14 @@ class _ActivityFormImagePickerState extends State<ActivityFormImagePicker> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             FlatButton.icon(
-              icon: Icon(Icons.photo),
-              label: Text('Galerie'),
+              icon: Icon(Icons.photo,color: Colors.black),
+              label: Text('Galerie',style: TextStyle(color:Colors.black,fontSize: 20),),
               onPressed: () => _pickImage(ImageSource.gallery),
             ),
             FlatButton.icon(
-              icon: Icon(Icons.photo_camera),
-              label: Text('camera'),
-              onPressed: () => _pickImage(ImageSource.camera),
+              icon: Icon(Icons.photo_camera,color: Colors.black),
+              label: Text('camera',style: TextStyle(color:Colors.black,fontSize: 20),),
+              onPressed: () => _pickImage(ImageSource.camera,),
             ),
           ],
         ),
@@ -53,7 +53,7 @@ class _ActivityFormImagePickerState extends State<ActivityFormImagePicker> {
             _deviceImage,
             fit: BoxFit.cover,
           )
-              : Text('Aucune image'),
+              : Text('Aucune image',style: TextStyle(color:Colors.black,fontSize: 20),),
         )
       ],
     );

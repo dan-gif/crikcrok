@@ -111,7 +111,7 @@ class _dropdownState extends State<dropdown> {
                 ),
               ],
               onChanged: (_value) => selected(_value),
-                hint: Text("votre choix"),
+                hint: Text("votre choix",style: TextStyle(color:Colors.black,fontSize: 20),),
                 disabledHint: Text("$value"),
             ),
           ),
@@ -119,9 +119,9 @@ class _dropdownState extends State<dropdown> {
               items: menuitems,
               onChanged:
                   disabledropdown ? null : (_value) => secondselected(_value),
-              hint: Text("$value"),
-              disabledHint: Text("votre second choix")),
-          Text('$value',style: TextStyle(color:Colors.white,fontSize: 20,),),
+              hint: Text("$value",style: TextStyle(color:Colors.white,fontSize: 20),),
+              disabledHint: Text("votre second choix",style: TextStyle(color:Colors.black,fontSize: 20),)),
+          Text('$value',style: TextStyle(color:Colors.black,fontSize: 20,),),
         ],
       ),
     );

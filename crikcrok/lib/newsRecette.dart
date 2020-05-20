@@ -1,6 +1,7 @@
 import 'package:crikcrok/NouvelleRecette/dropdown.dart';
 import 'package:crikcrok/index.dart';
 import 'package:crikcrok/NouvelleRecette/vue.dart';
+import 'package:crikcrok/search.dart';
 import 'package:flutter/material.dart';
 
 class mainScreen extends StatelessWidget {
@@ -9,35 +10,32 @@ class mainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            Color(0xFFF69D77),
-            Color(0xFF292C36),
-          ],
-        ),
-      ),
       child: Scaffold(
-        
-        backgroundColor: Colors.transparent,
+
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0.0,
           leading: IconButton(
-            icon: Icon(Icons.arrow_back, size: 20),
+            icon: Icon(Icons.arrow_back, size: 20, color: Colors.black),
             onPressed: () {
               Navigator.push(
                   context, MaterialPageRoute(builder: (context) =>premier()));
             },
           ),
+          actions: <Widget>[
+            IconButton(icon: Icon( Icons.search, size: 20, color: Colors.black, ),
+              onPressed:(){
+                Navigator.push( context,
+                    MaterialPageRoute( builder: (context) => search( ) ) );
+              },)
+          ],
           centerTitle: true,
           title: Text(
-            'Logo',
+            'Crikcrok',
             style: TextStyle(
               fontSize: 50.0,
               fontWeight: FontWeight.bold,
-              color: Colors.white,
+              color: Colors.black,
             ),
           ),
         ),
@@ -60,7 +58,7 @@ class mainScreen extends StatelessWidget {
                     padding: const EdgeInsets.only(top: 8.0),
                     child: TextField(
                       maxLines: 10,
-                      style: TextStyle(color: Colors.white, fontSize: 20),
+                      style: TextStyle(color: Colors.black, fontSize: 20),
                       decoration: InputDecoration(
                         labelText: "Recette",
                         hintText: "Votre Recette",
