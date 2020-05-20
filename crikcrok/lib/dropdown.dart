@@ -80,11 +80,13 @@ class _dropdownState extends State<dropdown> {
   @override
   Widget build(BuildContext context) {
     return Container(
+
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.center,
+        //mainAxisAlignment: MainAxisAlignment.start,
+        //crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Padding(
+
             padding: EdgeInsets.all(5.0),
             child: DropdownButton<String>(
               items: [
@@ -116,7 +118,7 @@ class _dropdownState extends State<dropdown> {
               onChanged:
                   disabledropdown ? null : (_value) => secondselected(_value),
               hint: Text("veuillez faire votre choix"),
-              disabledHint: Text("veuillez d'abord faire un premiers choix")),
+              disabledHint: Text("premiers choix")),
           Text('$value',style: TextStyle(color:Colors.white,fontSize: 20),),
         ],
       ),

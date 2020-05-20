@@ -44,13 +44,13 @@ class mainScreen extends StatelessWidget {
         body: SingleChildScrollView(
           child: Container(
             padding: EdgeInsets.only(
-                top: 100.0, right: 20.0, left: 20.0, bottom: 10.0),
+                top: 10.0, right: 20.0, left: 20.0, bottom: 10.0),
             child: new Form(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   SizedBox(
-                    height: 30.0,
+                    height:0.0,
                   ),
                   dropdown(),
                   SizedBox(

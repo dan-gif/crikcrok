@@ -16,8 +16,8 @@ class _premierState extends State<premier> {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            Color(0xFFF69D77),
-            Color(0xFF292C36),
+            Color( 0xFFF69D77 ),
+            Color( 0xFF292C36 ),
           ],
         ),
       ),
@@ -27,10 +27,10 @@ class _premierState extends State<premier> {
           backgroundColor: Colors.transparent,
           elevation: 0.0,
           leading: IconButton(
-            icon: Icon(Icons.arrow_back, size: 20),
+            icon: Icon( Icons.arrow_back, size: 20 ),
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => mainScreen()));
+              Navigator.push( context,
+                  MaterialPageRoute( builder: (context) => mainScreen( ) ) );
             },
           ),
           title: Text(
@@ -43,20 +43,22 @@ class _premierState extends State<premier> {
           ),
           centerTitle: true,
         ),
+
         body: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Text(
-                'Logo',
-                style: TextStyle(
-                  fontSize: 25.0,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
+          child: Container(
+            padding: EdgeInsets.only(
+                top: 10.0, right: 50.0, left: 115.0, bottom: 10.0 ),
+            child: new Form(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  dropdown(),
+                  SizedBox(
+                    height: 20,
+                  )
+                ],
               ),
-              dropdown(),
-            ],
+            ),
           ),
         ),
       ),
